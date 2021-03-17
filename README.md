@@ -1,5 +1,6 @@
 # yeb-web
-
+云e办在线办公系统的前端
+使用vue开发
 ## Project setup
 ```
 npm install
