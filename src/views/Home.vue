@@ -4,7 +4,7 @@
       <el-header class="homeHeader">
         <div class="title">云办公系统</div>
         <div>
-          <el-button icon="el-icon-bell" type="text" style="margin-right: 10px;color: black;" size="normal"></el-button>
+          <el-button icon="el-icon-bell" type="text" style="margin-right: 10px;color: black;" size="normal" @click="goChat"></el-button>
           <el-dropdown class="userInfo" @command="commandHandler">
             <span class="el-dropdown-link">{{user.name}}<i><img :src="user.userFace"></i></span>
             <el-dropdown-menu slot="dropdown" >
@@ -65,6 +65,9 @@ export default {
   },
 
   methods: {
+    goChat(){
+        this.$router.push('/chat');
+      },
     commandHandler(cmd) {
       if (cmd == "logout") {
          console.log("注销")
